@@ -13,7 +13,7 @@
         }
     ],
     "require": {
-        "andy/application": "dev-development"
+        "andy/library": "dev-development"
     }
 }
 
