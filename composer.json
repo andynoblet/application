@@ -9,11 +9,11 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/anoblet/application"
+            "url": "https://github.com/anoblet/library"
         }
     ],
     "require": {
-        "andy/library": "dev-development"
+        "andy/library": "dev-master"
     }
 }
 
