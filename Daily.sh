@@ -1,7 +1,7 @@
-git stash
-git checkout WIP
-git stash pop
-git add -A
-git commit -m "Update"
+git
+
+
+
+
 git tag "$(date +'%m/%d/%Y')"
 git push --tags
