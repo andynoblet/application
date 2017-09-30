@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/anoblet/library.git",
-                "reference": "58080056735a335ca9fcc938260b51e35a74b987"
+                "reference": "be977e2f20639b828b46dd939469888a586abda1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/anoblet/library/zipball/58080056735a335ca9fcc938260b51e35a74b987",
-                "reference": "58080056735a335ca9fcc938260b51e35a74b987",
+                "url": "https://api.github.com/repos/anoblet/library/zipball/be977e2f20639b828b46dd939469888a586abda1",
+                "reference": "be977e2f20639b828b46dd939469888a586abda1",
                 "shasum": ""
             },
             "type": "library",
@@ -36,7 +36,7 @@
                 "source": "https://github.com/anoblet/library/tree/master",
                 "issues": "https://github.com/anoblet/library/issues"
             },
-            "time": "2017-09-30T03:47:42+00:00"
+            "time": "2017-09-30T18:00:48+00:00"
         },
         {
             "name": "components/jquery",
