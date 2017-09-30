@@ -1,1 +1,4 @@
-<?php require_once("../Application.php"); ?>
+<?php
+    require_once("../vendor/autoload.php");
+    Application::Start();
+?>
