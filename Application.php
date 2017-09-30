@@ -1,3 +1,3 @@
 <?php
-    require_once("vendor/autoload.php");
+    require_once("Library/autoload.php");
     Application::Start();

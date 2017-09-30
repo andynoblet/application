@@ -6,6 +6,11 @@
             "email": "andrewbnoblet@gmail.com"
         }
     ],
+    "config": {
+        "vendor-dir": "Library"
+    },
+
+
     "repositories": [
         {
             "type": "vcs",
@@ -13,7 +18,9 @@
         }
     ],
     "require": {
-        "andy/library": "dev-master"
+        "andy/library": "dev-master",
+        "components/jquery": "^3.2",
+        "twbs/bootstrap": "^3.3"
+
     }
 }
-
