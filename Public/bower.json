@@ -1,0 +1,10 @@
+{
+  "name": "Public",
+  "homepage": "https://github.com/anoblet/application",
+  "authors": [
+    "Andy Noblet <andrewbnoblet@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT"
+}
