@@ -3,19 +3,13 @@
 namespace Application\Model;
 
 class User {
-
-
     public $FirstName;
     public $LastName;
     public $Email;
 
-    // use \Application\Model;
-
-    public function getSchema() {
-        $Schema = [
-            "Table" => "User",
-            "Columns" => [
-
+    private $Schema = [
+        "Table" => "User",
+        "Columns" => [
             [
                 "Name" => "FirstName",
                 "Type" => "varchar",
@@ -31,9 +25,7 @@ class User {
                 "Type" => "varchar",
                 "Length" => 25
             ]
-           ]];
-
-        return $Schema;
-    }
+        ]
+    ];
 }
 ?>
