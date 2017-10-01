@@ -1,24 +1,27 @@
+<?php
+
 namespace Application\Model;
 
 class User {
-    private $_Table = "User";
+
 
     public $FirstName;
     public $LastName;
     public $Email;
 
-    use Application\Model;
+    // use \Application\Model;
 
-    private function Schema() {
+    public function getSchema() {
         $Schema = [
             "Table" => "User",
-            "Columns" "> [
+            "Columns" => [
+
             [
                 "Name" => "FirstName",
                 "Type" => "varchar",
                 "Length" => 25
             ],
-[
+            [
                 "Name" => "LastName",
                 "Type" => "varchar",
                 "Length" => 25
@@ -28,8 +31,9 @@ class User {
                 "Type" => "varchar",
                 "Length" => 25
             ]
-           ];
+           ]];
 
         return $Schema;
     }
 }
+?>
