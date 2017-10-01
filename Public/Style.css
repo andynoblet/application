@@ -6,11 +6,13 @@
   }
   nav {
       background: #2196f3;
+      box-shadow: 0 3px 6px;
   }
   nav .dropdown {
       display: inline-block;
       vertical-align: middle;
       float: none;
+
   }
 
   nav .btn-default {
