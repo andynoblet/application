@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2f6f96236e4abf4161b6a9a336d036b8",
+    "content-hash": "eeaa28b3a3766afbbf82e4ee7b49ad12",
     "packages": [
         {
             "name": "andy/library",

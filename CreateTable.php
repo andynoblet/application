@@ -1,23 +1,31 @@
 <?php
+namespace Application;
 
-include("Library/autoload.php");
+use Database;
 
 class CreateTable {
     function Create() {
+        $Database = Database::getInstance();
         $Model = new \Application\Model\User;
         $Schema = $Model->getSchema();
 
         $Query = "CREATE TABLE {$Schema["Table"]} (";
 
-        foreach($Schema["Columns"] as $Column)
+        for($i = 0; $i < count($Schema["Columns"]); $i++)
         {
-            $Query .= "{$Column} {$Column['Type']}({$Column['Length']})";
+            $Column = $Schema["Columns"][$i];
+            $Query .= "{$Column["Name"]} {$Column['Type']}({$Column['Length']})";
+            if($i == count($Schema["Columns"])-1);
+            else {
+                $Query .= ", ";
+            }
         }
 
         $Query .= ")";
-var_dump($Query);
+        var_dump($Query);
     }
-}
+  }
+include("Library/autoload.php");
 include ("Model/User.php");
 
 $Class = new CreateTable();

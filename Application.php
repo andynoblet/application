@@ -10,5 +10,9 @@
     $Path = $Path . "/";
     define("PATH", $Path);
 
+    // Autoload
     require_once("Library/autoload.php");
+
+    // Start
     Application::Start();
+?>

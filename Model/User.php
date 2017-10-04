@@ -2,12 +2,14 @@
 
 namespace Application\Model;
 
-class User {
+class User extends \Application\Model {
+ 
+  
     public $FirstName;
     public $LastName;
     public $Email;
 
-    private $Schema = [
+    protected $Schema = [
         "Table" => "User",
         "Columns" => [
             [
