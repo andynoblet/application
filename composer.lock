@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b7d23c480cb7bb76009f76420ed4800d",
+    "content-hash": "86976c64520fdb055ae3d841dcb6fbab",
     "packages": [
         {
-            "name": "andy/library",
+            "name": "anoblet/library",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/anoblet/library.git",
-                "reference": "b050ef3616fb8f022746865520dd68cc0d9cf5ab"
+                "reference": "9aa456f9768c18801e07bf4c1226b9ab7c140265"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/anoblet/library/zipball/b050ef3616fb8f022746865520dd68cc0d9cf5ab",
-                "reference": "b050ef3616fb8f022746865520dd68cc0d9cf5ab",
+                "url": "https://api.github.com/repos/anoblet/library/zipball/9aa456f9768c18801e07bf4c1226b9ab7c140265",
+                "reference": "9aa456f9768c18801e07bf4c1226b9ab7c140265",
                 "shasum": ""
             },
             "type": "library",
@@ -36,7 +36,7 @@
                 "source": "https://github.com/anoblet/library/tree/master",
                 "issues": "https://github.com/anoblet/library/issues"
             },
-            "time": "2017-10-01T01:32:08+00:00"
+            "time": "2017-10-06T12:12:46+00:00"
         },
         {
             "name": "components/jquery",
@@ -1049,16 +1049,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.8.27",
+            "version": "v2.8.28",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "4c29dec8d489c4e37cf87ccd7166cd0b0e6a45c5"
+                "reference": "842fb6df22180244b4c65935ce1a88d324e5ff9e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/4c29dec8d489c4e37cf87ccd7166cd0b0e6a45c5",
-                "reference": "4c29dec8d489c4e37cf87ccd7166cd0b0e6a45c5",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/842fb6df22180244b4c65935ce1a88d324e5ff9e",
+                "reference": "842fb6df22180244b4c65935ce1a88d324e5ff9e",
                 "shasum": ""
             },
             "require": {
@@ -1094,13 +1094,13 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2017-06-01T20:52:29+00:00"
+            "time": "2017-10-05T14:38:30+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "andy/library": 20,
+        "anoblet/library": 20,
         "twbs/bootstrap": 10
     },
     "prefer-stable": false,
