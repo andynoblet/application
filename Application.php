@@ -4,10 +4,6 @@
 
     // Set Path
     $Name = str_replace($_SERVER['DOCUMENT_ROOT'], null, $_SERVER['SCRIPT_FILENAME']);
-    $Parts = explode("/", $Name);
-    array_pop($Parts);
-    $Path = implode("/", $Parts);
-    $Path = $Path . "/";
     define("PATH", $Path);
 
     // Autoload

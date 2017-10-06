@@ -20,8 +20,8 @@
     "require": {
         "andy/library": "dev-master",
         "components/jquery": "^3.2",
-        "twbs/bootstrap": "^3.3",
-        "php": "^5.4"
+        "twbs/bootstrap": "4.0.0-beta"
+
 
    },
     "require-dev": {

@@ -1,0 +1,33 @@
+{
+    "name": "Andy/Application",
+    "authors": [
+        {
+            "name": "Andrew Noblet",
+            "email": "andrewbnoblet@gmail.com"
+        }
+    ],
+
+
+
+
+
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/anoblet/library"
+        }
+    ],
+    "require": {
+
+        "components/jquery": "^3.2",
+        "twbs/bootstrap": "4.0.0-beta"
+
+
+   }
+
+
+
+
+
+
+}
