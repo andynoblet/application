@@ -7,7 +7,7 @@
     define("PATH", $Path);
 
     // Autoload
-    require_once("vendor/autoload.php");
+    require_once(__DIR__ . "/vendor/autoload.php");
 
     // Start
     Application::Start();
