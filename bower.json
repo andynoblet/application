@@ -1,0 +1,9 @@
+{
+  "name": "application",
+  "homepage": "https://github.com/anoblet/application",
+  "authors": [
+    "Andy Noblet <andrewbnoblet@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true
+}
