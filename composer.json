@@ -6,11 +6,6 @@
             "email": "andrewbnoblet@gmail.com"
         }
     ],
-    "config": {
-        "vendor-dir": "Library"
-    },
-
-
     "repositories": [
         {
             "type": "vcs",
@@ -21,13 +16,11 @@
         "anoblet/library": "dev-master",
         "components/jquery": "^3.2",
         "twbs/bootstrap": "4.0.0-beta"
-
-
    },
     "require-dev": {
         "phpunit/phpunit": "^4.8"
     },
     "autoload": {
-        "classmap": ["./"]
+        "classmap": ["./vendor"]
     }
 }
