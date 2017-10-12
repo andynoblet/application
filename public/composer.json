@@ -6,11 +6,6 @@
             "email": "andrewbnoblet@gmail.com"
         }
     ],
-
-
-
-
-
     "repositories": [
         {
             "type": "vcs",
@@ -18,16 +13,7 @@
         }
     ],
     "require": {
-
         "components/jquery": "^3.2",
         "twbs/bootstrap": "4.0.0-beta"
-
-
    }
-
-
-
-
-
-
 }
