@@ -46,7 +46,6 @@
         angular.module('App', ['ngRoute', 'ngMaterial'])
             .controller("MyController", MyController)
             .controller("Me", Me)
-
                 .config(function ($routeProvider, $locationProvider) {
                 $routeProvider
                     .when(':a*', {
@@ -55,12 +54,15 @@
                         controller: 'Me'
                     })
                 // configure html5 to get links working on jsfiddle
-                $locationProvider.html5Mode(true);
+                // $locationProvider.html5Mode(true);
             });
         function Me($scope, $route, $routeParams) {
             console.log($route);
             console.log($routeParams);
-            $scope.templateUrl = $routeParams.a;
+            var a = $routeParams.a;
+            var here = "<?=PATH;?>" + a;
+            console.log(here);
+            $scope.templateUrl = here;
         }
 
         function MyController($scope, $mdSidenav) {
@@ -97,15 +99,15 @@
                 .platformBrowserDynamic().bootstrapModule(AppModule);
         });
     </script>
-    <base href="<?=BASE?>" target="_blank">
+    <base href="<?=PATH;?>">
 </head>
 <body ng-controller="MyController" ng-cloak>
 <div class="container-fluid">
     <div class="row">
-        <div ng-include="'Layout/Index/Top'" class="col p-0" src="<?= Application::getURL("Layout/Index/Top"); ?>"></div>
+        <div ng-include="'<?=PATH?>/Layout/Index/Top'" class="col p-0" src="<?= Application::getURL("Layout/Index/Top"); ?>"></div>
     </div>
     <div class="row">
-        <md-sidenav md-component-id="left" class="md-sidenav-left md-whiteframe-z2" ng-include="'Layout/Index/Left'">
+        <md-sidenav md-component-id="left" class="md-sidenav-left md-whiteframe-z2" ng-include="'<?=PATH?>/Layout/Index/Left'">
         </md-sidenav>
         <div id="center" class="col p-3" ng-view>
             <hello-app></hello-app>
