@@ -1,14 +1,19 @@
-<md-toolbar color="primary" class=".md-toolbar-tools">
-    <md-fab>
-        <i class="material-icons align-middle">menu</i>
-    </md-fab>
+<md-toolbar color="primary" class="md-toolbar-tools justify-content-start md-whiteframe-z2">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2">
+                <md-button class="md-icon-button" ng-click="openLeftMenu()">
+                    <i class="material-icons align-middle">menu</i>
+                </md-button>
+            </div>
+            <div class="col-8">
+                <div class="navbar-brand align-middle">Brand</div>
+            </div>
+            <div class="col-2">
+                <md-button class="md-icon-button">
+                    <i class="material-icons align-middle">account_circle</i>
+                </md-button>
+            </div>
+        </div>
+    </div>
 </md-toolbar>
-<nav class="navbar navbar-fixed navbar-dark text-white bg-primary pl-0">
-    <button id="dropdownMenuButton" class="btn btn-link text-white" ng-click="openLeftMenu()">
-        <i class="material-icons align-middle">menu</i>
-    </button>
-    <div class="navbar-brand align-middle">Brand</div>
-    <md-button>
-        <i class="material-icons align-middle">account_circle</i>
-    </md-button>
-</nav>
