@@ -60,7 +60,7 @@
             console.log($route);
             console.log($routeParams);
             var a = $routeParams.a;
-            var here = "<?=PATH;?>" + a;
+            var here = "<?=PATH_NO_TRAIL;?>" + a;
             console.log(here);
             $scope.templateUrl = here;
         }
@@ -104,10 +104,10 @@
 <body ng-controller="MyController" ng-cloak>
 <div class="container-fluid">
     <div class="row">
-        <div ng-include="'<?=PATH?>/Layout/Index/Top'" class="col p-0" src="<?= Application::getURL("Layout/Index/Top"); ?>"></div>
+        <div ng-include="'<?=PATH?>Layout/Index/Top'" class="col p-0" src="<?= Application::getURL("Layout/Index/Top"); ?>"></div>
     </div>
     <div class="row">
-        <md-sidenav md-component-id="left" class="md-sidenav-left md-whiteframe-z2" ng-include="'<?=PATH?>/Layout/Index/Left'">
+        <md-sidenav md-component-id="left" class="md-sidenav-left md-whiteframe-z2" ng-include="'<?=PATH?>Layout/Index/Left'">
         </md-sidenav>
         <div id="center" class="col p-3" ng-view>
             <hello-app></hello-app>
