@@ -4,6 +4,9 @@
   "description": "",
   "main": "jQuery.js",
   "dependencies": {
+    "@angular/cdk": "^2.0.0-beta.12",
+    "@angular/common": "^4.4.5",
+    "@angular/core": "^4.4.5",
     "@angular/material": "^2.0.0-beta.12",
     "@uirouter/angular": "^1.0.0-beta.8",
     "angular": "^1.6.6",
@@ -14,7 +17,8 @@
     "angular-route": "^1.6.6",
     "bootstrap": "^4.0.0-beta",
     "jquery": "^3.2.1",
-    "popper.js": "^1.12.5"
+    "popper.js": "^1.12.5",
+    "rxjs": "^5.4.3"
   },
   "devDependencies": {},
   "scripts": {
