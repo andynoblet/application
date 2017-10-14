@@ -3,7 +3,7 @@
 
     app.AppModule.annotations = [
         new ng.core.NgModule({
-            imports: [ng.platformBrowser.BrowserModule],
+            imports: [ng.platformBrowser.BrowserModule, ng.material],
             declarations: [app.AppComponent],
             bootstrap: [app.AppComponent]
         })
