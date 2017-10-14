@@ -1,29 +1,25 @@
-<form action="<?=PATH;?>/#!/User/Index/Login" method="POST">
+<form action="<?= PATH; ?>#!/User/Index/Login" method="POST" ng-controller="Form">
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12 col-sm-6">
-                <div class="form-group col-xs-10">
-                    <input type="email" class="form-control" name="Email" aria-describedby="emailHelp"
-                           placeholder="Email">
-                    </small>
-                </div>
-                <div class="form-group col-xs-10">
-                    <input type="Password" class="form-control" name="Password" aria-describedby="emailHelp"
+                <md-input-container>
+                    <label>Email</label>
+                    <input type="email" name="Email" aria-describedby="emailHelp">
+                </md-input-container>
+                <md-input-container>
+                    <input type="Password" name="Password" aria-describedby="emailHelp"
                            placeholder="Password">
-                    </small>
-                </div>
+                </md-input-container>
+                <md-button class="md-raised md-primary" ng-click="submit()">Login</md-button>
                 <div class="form-group col-xs-10">
-                    <md-button type="submit" class="md-raised md-primary">Login</md-button>
-                </div>
-                <div class="form-group col-xs-10">
-                    <small><?=$Message;?></small>
+                    <small><?= $Data['Message']; ?></small>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-6">Don't have an account? <a href="<?= Application::getURL("User/Index/Register"); ?>">Register</a>
+            <div class="col-xs-12 col-sm-6">Don't have an account? <a href="#!/User/Index/Register">Register</a>
             </div>
         </div>
     </div>
     <script>
-        refresh("#top");
+        // refresh("#top");
     </script>
 </form>

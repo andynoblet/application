@@ -9,8 +9,8 @@ use Application\Module\Database;
 
 class Index {
 
-    use \Application\Controller;
     use \Application\Base;
+    use \Application\Controller;
 
     public function Index() {
         if(Application::getStaticModule("User")->isLoggedIn()) {
@@ -92,7 +92,7 @@ class Index {
     }
 
     public function Register() {
-        $User = User::getStaticModel("User");
+        $User = $this->getModel("User");
         $Request = $this->Request();
 
         $Message = null;
@@ -109,7 +109,7 @@ class Index {
         }
 
         if (isset($Error)) {
-            return User::getStaticView("Register.phtml", array("Message" => $Error));
+            return $this->View("User/Register.phtml", array("Message" => $Error));
         }
         // $Database = $this->getModule("Database");
         $Database = Database::getInstance();
@@ -128,7 +128,7 @@ class Index {
             $Message = "Could not create user;";
         }
 
-        $View = User::getStaticView("Register.phtml", array("Result" => $Result, "Message" => $Message));
+        $View = $this->View("User/Register.phtml", array("Result" => $Result, "Message" => $Message));
 
         return $View;
     }

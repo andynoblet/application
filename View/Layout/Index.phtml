@@ -18,10 +18,11 @@
     <script type="text/javascript" src="http://localhost:8080/s/53a6b67871465ed7b4838db208cf960f-T/-6pq3en/74002/b6b48b2829824b869586ac216d119363/2.0.23/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=a76297e0"></script>
     <!-- Angular -->
     <script src="node_modules/angular/angular.js"></script>
-    <script src="node_modules/angular-aria/angular-aria.js"></script>
+    <script src="node_modules/angular-aria/angul ar-aria.js"></script>
     <script src="node_modules/angular-animate/angular-animate.js"></script>
-    <script src="node_modules/angular-material/angular-material.js"></script>
     <script src="node_modules/angular-route/angular-route.js"></script>
+    <script src="node_modules/angular-material/angular-material.js"></script>
+
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.4/angular-material.min.css">
 
     <script src="node_modules/core-js/client/shim.min.js"></script>
@@ -33,7 +34,6 @@
     <script src="node_modules/@angular/common/bundles/common.umd.js"></script>
     <script src="node_modules/@angular/compiler/bundles/compiler.umd.js"></script>
     <script src="node_modules/@angular/cdk/bundles/cdk.umd.js"></script>
-    <script src="node_modules/@angular/cdk/bundles/cdk-bidi.umd.js"></script>
     <script src="node_modules/@angular/platform-browser/bundles/platform-browser.umd.js"></script>
     <script src="node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js"></script>
     <script src="node_modules/@angular/material/bundles/material.umd.js"></script>
@@ -46,20 +46,27 @@
         angular.module('App', ['ngRoute', 'ngMaterial'])
             .controller("MyController", MyController)
             .controller("Me", Me)
-                .config(function ($routeProvider, $locationProvider) {
+            .config(function ($routeProvider, $locationProvider) {
                 $routeProvider
-                    .when(':a*', {
+                    .when(':route*', {
                         // templateUrl: 'CMS/Index/Home',
                         template: '<div ng-include="templateUrl">Loading...</div>',
                         controller: 'Me'
                     })
                 // configure html5 to get links working on jsfiddle
                 // $locationProvider.html5Mode(true);
-            });
+            }).controller("Form", function ($scope, $routeParams, $location) {
+                $scope.submit = function () {
+                    console.log($routeParams);
+                    var route = $routeParams.a;
+                    $location.path(route);
+                }
+        });
+
         function Me($scope, $route, $routeParams) {
             console.log($route);
             console.log($routeParams);
-            var a = $routeParams.a;
+            var a = $routeParams.route;
             var here = "<?=PATH_NO_TRAIL;?>" + a;
             console.log(here);
             $scope.templateUrl = here;
@@ -68,6 +75,9 @@
         function MyController($scope, $mdSidenav) {
             $scope.openLeftMenu = function () {
                 $mdSidenav('left').toggle();
+            };
+            $scope.close = function () {
+                $mdSidenav('left').close();
             };
         }
 
@@ -99,15 +109,20 @@
                 .platformBrowserDynamic().bootstrapModule(AppModule);
         });
     </script>
-    <base href="<?=PATH;?>">
+
+    <script src='Component.js'></script>
+    <script src='Module.js'></script>
+    <script src='App.js'></script>
+    <base href="<?= PATH; ?>">
 </head>
 <body ng-controller="MyController" ng-cloak>
+<app></app>
 <div class="container-fluid">
     <div class="row">
-        <div ng-include="'<?=PATH?>Layout/Index/Top'" class="col p-0" src="<?= Application::getURL("Layout/Index/Top"); ?>"></div>
+        <div ng-include="'<?= PATH ?>Layout/Index/Top'" class="col p-0" src="<?= Application::getURL("Layout/Index/Top"); ?>"></div>
     </div>
     <div class="row">
-        <md-sidenav md-component-id="left" class="md-sidenav-left md-whiteframe-z2" ng-include="'<?=PATH?>Layout/Index/Left'">
+        <md-sidenav md-component-id="left" class="md-sidenav-left md-whiteframe-z2" ng-include="'<?= PATH ?>Layout/Index/Left'">
         </md-sidenav>
         <div id="center" class="col p-3" ng-view>
             <hello-app></hello-app>
