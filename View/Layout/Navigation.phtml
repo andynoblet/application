@@ -10,11 +10,16 @@
                 <div class="navbar-brand align-middle"><a href="<? echo Application::getURL(); ?>">Brand</a></div>
             </div>
             <div class="col-2 col-sm-1">
-                <a href="#!/User/Index/Account">
-                    <md-button class="md-icon-button">
+                <md-menu md-position-mode="target-right target">
+                    <md-button ng-click="$mdMenu.open($event)" class="md-icon-button" aria-label="Open some menu">
                         <i class="material-icons align-middle">account_circle</i>
                     </md-button>
-                </a>
+                    <md-menu-content>
+                        <md-menu-item>
+                            <a href="<?= PATH; ?>#!/User/Index/Login" ng-click="close()">Login</a>
+                        </md-menu-item>
+                    </md-menu-content>
+                </md-menu>
             </div>
         </div>
     </div>

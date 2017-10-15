@@ -1,27 +1,29 @@
-<form action="User/Index/Register">
+<form action="<?= PATH; ?>#!/User/Index/Register" method="POST" ng-controller="Form">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xs-6">
-                <md-input-container>
-                    <label>Email</label>
-                    <input type="email" name="Email" aria-describedby="emailHelp">
-                </md-input-container>
-                <md-input-container>
-                    <input type="Password" name="Password" aria-describedby="emailHelp"
-                           placeholder="Password">
-                </md-input-container>
-                <div class="form-group col-xs-10">
-                    <md-button type="submit" class="md-raised md-primary">Register</md-button>
-                </div>
-                <div class="form-group col-xs-10">
-                    <small><?=$Data['Message'];?></small>
-                </div>
+            <div class="col-xs-12 col-sm-6">
+                <md-card>
+                    <md-card-content>
+                        <md-input-container>
+                            <label>Email</label>
+                            <input type="email" name="Email" aria-describedby="emailHelp">
+                        </md-input-container>
+                        <md-input-container>
+                            <input type="Password" name="Password" aria-describedby="emailHelp"
+                                   placeholder="Password">
+                        </md-input-container>
+                        <md-button class="md-raised md-primary" ng-click="submit()">Register</md-button>
+                        <div class="form-group col-xs-10">
+                            <small><?= $Data['Message']; ?></small>
+                        </div>
+                    </md-card-content>
+                </md-card>
             </div>
-            <div class="col-xs-6"> Have an account? <a href="#!/User/Index/Login">Login</a>
+            <div class="col-xs-12 col-sm-6"><a href="#!/User/Index/Login">Login</a>
             </div>
         </div>
     </div>
     <script>
-       load("#Navigation");
+        // refresh("#top");
     </script>
 </form>
