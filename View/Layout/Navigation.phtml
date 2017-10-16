@@ -1,0 +1,26 @@
+<md-toolbar color="primary" class="md-toolbar-tools justify-content-start md-whiteframe-z2">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2 col-sm-1">
+                <md-button class="md-icon-button" ng-click="openLeftMenu()">
+                    <i class="material-icons align-middle">menu</i>
+                </md-button>
+            </div>
+            <div class="col-8 col-sm-10">
+                <div class="navbar-brand align-middle"><a href="<? echo Application::getURL(); ?>">Brand</a></div>
+            </div>
+            <div class="col-2 col-sm-1">
+                <md-menu md-position-mode="target-right target">
+                    <md-button ng-click="$mdMenu.open($event)" class="md-icon-button" aria-label="Open some menu">
+                        <i class="material-icons align-middle">account_circle</i>
+                    </md-button>
+                    <md-menu-content>
+                        <md-menu-item>
+                            <a href="<?= PATH; ?>#!/User/Index/Login" ng-click="close()">Login</a>
+                        </md-menu-item>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+        </div>
+    </div>
+</md-toolbar>

@@ -13,9 +13,7 @@
         }
     ],
     "require": {
-        "anoblet/library": "dev-master"
-    },
-    "autoload": {
-        "classmap": ["./"]
-    }
+        "components/jquery": "^3.2",
+        "twbs/bootstrap": "4.0.0-beta"
+   }
 }
