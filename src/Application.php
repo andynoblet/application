@@ -7,4 +7,8 @@
 
     // Start
     Application::getInstance()->Start();
+
+    class Application extends \Application\Model\Application {
+
+    }
 ?>

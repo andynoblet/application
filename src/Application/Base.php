@@ -31,6 +31,12 @@ trait Base {
         }
         return $Controller;
     }
+
+    public static function getConfiguration($Configuration) {
+        if($Configuration == "ToolbarPosition") {
+            return "Bottom";
+        }
+    }
 }
 
 ?>
