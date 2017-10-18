@@ -1,13 +1,13 @@
 <mat-toolbar color="primary" class="mat-elevation-z5">
-    <div>
+    <div class="col-2">
         <button mat-icon-button (click)="sidenav.toggle()">
             <i class="material-icons align-middle">menu</i>
         </button>
     </div>
     <div class="col text-center">
-        Brand
+        <button mat-button href="<?php echo Application::getURL(); ?>">Brand</button>
     </div>
-    <div>
+    <div class="col-2">
         <button mat-icon-button href="/Account">
             <i class="material-icons align-middle">account_circle</i>
         </button>
@@ -15,17 +15,9 @@
 </mat-toolbar>
 <mat-sidenav-container>
     <mat-sidenav #sidenav mode="over">
-        <mat-card class="mat-elevation-z5">
-            <mat-card-title>Test</mat-card-title>
-            <mat-card-content>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sodales purus eu suscipit ornare.
-                Suspendisse et enim nec risus ornare posuere. Etiam blandit ligula a sollicitudin dignissim. Aliquam
-                euismod tincidunt risus id dapibus. Proin eu blandit tellus. Aliquam erat volutpat. Ut eget leo
-                pellentesque, faucibus neque non, porta tortor. Aliquam sed urna quis neque dictum molestie id vitae mi.
-                Sed sed metus lacinia, euismod sapien non, scelerisque libero. Duis eget lacinia nunc, ac porttitor
-                urna.
-            </mat-card-content>
-        </mat-card>
+        <button href="" mat-menu-item (click)="sidenav.toggle()">1</button>
+        <button href="" mat-menu-item (click)="sidenav.toggle()">2</button>
+        <button href="" mat-menu-item (click)="sidenav.toggle()">3</button>
     </mat-sidenav>
     <mat-card class="mat-elevation-z5">
         <mat-card-title>Test</mat-card-title>
@@ -35,18 +27,23 @@
             tincidunt risus id dapibus. Proin eu blandit tellus. Aliquam erat volutpat. Ut eget leo pellentesque,
             faucibus neque non, porta tortor. Aliquam sed urna quis neque dictum molestie id vitae mi. Sed sed metus
             lacinia, euismod sapien non, scelerisque libero. Duis eget lacinia nunc, ac porttitor urna.
-
-
         </mat-card-content>
     </mat-card>
 </mat-sidenav-container>
 <mat-toolbar color="primary" class="mat-elevation-z5">
     <div class="col-2">
-        <button mat-icon-button>
+        <button [matMenuTriggerFor]="menu" class="h-100" mat-icon-button>
             <i class="material-icons align-middle">menu</i>
         </button>
-        <mat-menu>
-            <mat-list-item>1</mat-list-item>
+        <mat-menu #menu="matMenu" [overlapTrigger]="false" xposition="before" yposition="above" class="Menu">
+            <button mat-menu-item>1</button>
+            <button mat-menu-item>1</button>
+            <button mat-menu-item>1</button>
         </mat-menu>
+    </div>
+    <div class="col text-center">
+        <button mat-button href="<?php echo Application::getURL(); ?>">Brand</button>
+    </div>
+    <div class="col-2">
     </div>
 </mat-toolbar>

@@ -1,15 +1,10 @@
 <?php
 
-namespace Application\Controller\User;
-
-use Application;
-use Application\Module\User;
-use Application\Module\Database;
-
+namespace Application\Module\User\Controller;
 
 class Index {
-
     use \Application\Base;
+    use \Application\Library\Common;
     use \Application\Controller;
 
     public function Index() {

@@ -6,7 +6,7 @@ body {
     z-index: 2;
 }
 .mat-drawer-content {
-    padding: 3em;
+    padding: 1em;
 }
 .mat-sidenav {
     width: 25%
@@ -26,4 +26,15 @@ app {
 }
 .mat-sidenav-container {
     flex: 1;
+}
+
+.mat-menu-panel {
+    background: #c2185b;
+    width: 25vw;
+    /* box-shadow: none !important; */
+}
+
+.cdk-overlay-pane {
+    bottom: 56px !important;
+    left: 0px !important;
 }

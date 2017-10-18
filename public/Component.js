@@ -5,6 +5,6 @@
 
     app.AppComponent.annotations = [ new ng.core.Component({
         selector : 'app',
-        templateUrl : 'App.html',
+        templateUrl : 'Layout/Index/App',
     }) ];
 })(window.app || (window.app = {}));

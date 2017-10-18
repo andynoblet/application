@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" layout-fill>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -46,13 +46,13 @@
 
     <script src='Component.js'></script>
     <script src='Module.js'></script>
-    <script src='App.js'></script>
+    <script src='Application.js'></script>
 
     <link href="App.css" rel="stylesheet">
 
-    <base href="<?=PATH; ?>">
+    <base href="<?php echo Application::getURL(); ?>">
 </head>
-<body ng-cloak>
+<body>
 <app></app>
 </body>
 </html>

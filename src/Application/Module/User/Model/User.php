@@ -1,13 +1,12 @@
 <?php
 
-namespace Application\Model;
+namespace Application\Module\User\Model;
 
 class User extends \Application\Model {
- 
-  
-    public $FirstName;
-    public $LastName;
-    public $Email;
+    protected $FirstName = "Andy";
+    protected $LastName = "Noblet";
+    protected $Email;
+    protected $Password;
 
     protected $Schema = [
         "Table" => "User",
@@ -23,11 +22,12 @@ class User extends \Application\Model {
                 "Length" => 25
             ],
             [
-                "Name" => "Email", 
+                "Name" => "Email",
                 "Type" => "varchar",
                 "Length" => 25
             ]
         ]
     ];
 }
+
 ?>

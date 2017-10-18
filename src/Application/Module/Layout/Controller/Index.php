@@ -1,14 +1,15 @@
 <?php
 
-namespace Application\Controller\Layout;
+namespace Application\Module\Layout\Controller;
 
 // use Application\Module\Layout;
 
 class Index {
+    use \Application\Library\Common;
     use \Application\Controller;
-
+  
     public function Index() {
-        return $this->View("Layout/Index.phtml");
+        return $this->View("Index.phtml");
     }
 
     public function Navigation() {
@@ -29,6 +30,10 @@ class Index {
 
     public function Bottom() {
         return $this->View("Bottom.phtml");
+    }
+
+    public function App() {
+        return $this->View("Application.phtml");
     }
 }
 

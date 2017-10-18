@@ -1,12 +1,23 @@
 <?php
 namespace Application;
 
-use Database;
+use Application\Database;
+use Application\Module\Application;
 
 class CreateTable {
+    protected $link;
+
+    public function __construct() {
+        $this->Connect();
+    }
+
+    function Connect() {
+        $this->link = mysqli_connect("mysql", "user", "password", "Application" );
+
+    }
     function Create() {
         $Database = Database::getInstance();
-        $Model = new \Application\Model\User;
+        $Model = Application::getInstance()->getModule("User")->getModel("User");
         $Schema = $Model->getSchema();
 
         $Query = "CREATE TABLE {$Schema["Table"]} (";
@@ -25,8 +36,7 @@ class CreateTable {
         var_dump($Query);
     }
   }
-include("Library/autoload.php");
-include ("Model/User.php");
+include("vendor/autoload.php");
 
 $Class = new CreateTable();
 $Class->Create();

@@ -13,6 +13,7 @@
                 ng.material.MatExpansionModule,
                 ng.material.MatButtonModule,
                 ng.material.MatMenuModule,
+                ng.material.MatDialogModule,
                 ng['flex-layout'].FlexLayoutModule
             ],
             declarations: [app.AppComponent],

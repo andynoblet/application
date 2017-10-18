@@ -16,6 +16,6 @@
         "anoblet/library": "dev-master"
     },
     "autoload": {
-        "classmap": ["./"]
+        "classmap": ["./src"]
     }
 }

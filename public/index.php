@@ -1,10 +1,12 @@
 <?php
-$Name = str_replace($_SERVER['DOCUMENT_ROOT'], null, $_SERVER['SCRIPT_FILENAME']);
-$Name = explode("/", $Name);
-array_pop($Name);
-$Name = implode("/", $Name);
-define("PATH", $Name . "/");
-define("PATH_NO_TRAIL", $Name);
+// Set path
+$Script = str_replace($_SERVER['DOCUMENT_ROOT'], null, $_SERVER['SCRIPT_FILENAME']);
+$Parts = explode("/", $Script);
+array_pop($Parts);
+$Path = implode("/", $Parts);
 
-require_once("../Application.php");
+define("PATH", $Path . "/");
+define("PATH_NO_TRAIL", $Path);
+
+require_once("../src/Application.php");
 ?>
