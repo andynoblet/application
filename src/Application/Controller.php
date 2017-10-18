@@ -8,7 +8,7 @@ trait Controller
         $Class = get_called_class();
         $Parts = explode("\\", $Class);
         array_splice($Parts, -2, 2);
-
+g
         $Class = implode("\\", $Parts);
         $Class = str_replace("\\", DIRECTORY_SEPARATOR, $Class);
 
