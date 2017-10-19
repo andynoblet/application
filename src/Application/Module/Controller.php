@@ -6,7 +6,6 @@ class Controller {
     public $Path;
 
     use \Application\Base;
-    use \Application\Library\Common;
 
     public function Execute() {
         $Path = $this->getPath();
@@ -21,6 +20,25 @@ class Controller {
         if (empty($Parts[$Count - 1])) {
             array_pop($Parts);
         };
+
+        // Modulle/Action
+
+        /*
+        if (isset($Parts[0])) {
+            $Request['Module'] = $Parts[0];
+        } else {
+            $Request['Module'] = "Layout";
+        }
+        if (isset($Parts[1])) {
+            $Request['Action'] = $Parts[1];
+        } else {
+            $Request['Action'] = "Index";
+        }
+
+        $Output = $this->getModule($Request['Module'])->getController($Request['Controller'])->{$Request['Action']}();
+        */
+
+        // Module/Controller/Action
 
         if (isset($Parts[0])) {
             $Request['Module'] = $Parts[0];
@@ -38,8 +56,7 @@ class Controller {
             $Request['Action'] = "Index";
         }
 
-        $Output = $this->Module($Request['Module'])->Controller($Request['Controller'])->{$Request['Action']}();
-        // $Output = $this->Module($Request['Module'])->Controller($Request['Module'] . "\\" . $Request['Controller'])->{$Request['Action']}();
+        $Output = $this->Module($Request['Module'])->Controller($Request['Module'] . "\\" . $Request['Controller'])->{$Request['Action']}();
 
         return $Output;
     }
