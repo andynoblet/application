@@ -37,7 +37,7 @@ trait Base {
             return "Bottom";
         }
         if($Configuration == "ToolbarX") {
-            return "Left";
+            return "Right";
         }
     }
 }
