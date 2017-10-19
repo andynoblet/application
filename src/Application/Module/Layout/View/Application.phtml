@@ -200,20 +200,15 @@
     </mat-sidenav-container>
 <?php if (Application::getConfiguration("ToolbarPosition") == "Bottom"): ?>
     <mat-toolbar color="primary" class="mat-elevation-z5">
-        <div class="menu-button col-2<?php if (Application::getConfiguration("ToolbarX") == "Right"): ?> order-2<?php endif; ?>">
-            <button [matMenuTriggerFor]="menu" class="h-100" mat-icon-button>
-                <i class="material-icons align-middle">menu</i>
+        <div class="col<?php if (Application::getConfiguration("ToolbarX") == "Right"): ?> order-2<?php endif; ?> text-center">
+            <button [matMenuTriggerFor]="menu" mat-icon-button>
+                <i class="material-icons">menu</i>
             </button>
             <mat-menu #menu="matMenu" [overlapTrigger]="false" xposition="before" yposition="above" class="Menu">
                 <button mat-menu-item href="<?php echo Application::getURL("Login"); ?>">Login</button>
                 <button mat-menu-item>Register</button>
                 <button mat-menu-item>1</button>
             </mat-menu>
-        </div>
-        <div class="col<?php if (Application::getConfiguration("ToolbarX") == "Right"): ?> order-1<?php endif; ?> text-center">
-            <button mat-button href="<?php echo Application::getURL(); ?>">Brand</button>
-        </div>
-        <div class="col-2">
         </div>
     </mat-toolbar>
 <?php endif; ?>
