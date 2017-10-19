@@ -3,6 +3,7 @@
 namespace Application\Module {
     class Session {
         use \Application\Library\Common;
+
         public function createSession() {
             session_start();
         }
