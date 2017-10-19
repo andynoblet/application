@@ -42,3 +42,27 @@ app {
     bottom: 56px !important;
     left: 0px !important;
 }
+
+/*
+.mat-toolbar {
+    min-height: 52x !important;
+    height: 52px !important;
+}
+.mat-toolbar-layout {
+    height: 100%;
+}
+.menu-button {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+.menu-button > .mat-icon-button {
+    height: 100%;
+    vertical-align: middle;
+}
+
+.mat-toolbar-row {
+}
+*/

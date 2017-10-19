@@ -6,6 +6,7 @@ class Controller {
     public $Path;
 
     use \Application\Base;
+    use \Application\Library\Common;
 
     public function Execute() {
         $Path = $this->getPath();
