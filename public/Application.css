@@ -42,6 +42,9 @@ app {
     bottom: 56px !important;
     left: 0px !important;
 }
+.mat-toolbar {
+    z-index: 9999 !important;
+}
 
 /*
 .mat-toolbar {
