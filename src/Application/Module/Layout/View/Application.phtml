@@ -200,7 +200,7 @@
     </mat-sidenav-container>
 <?php if (Application::getConfiguration("ToolbarPosition") == "Bottom"): ?>
     <mat-toolbar color="primary" class="mat-elevation-z5">
-        <div class="col-2<?php if (Application::getConfiguration("ToolbarX") == "Right"): ?> align-content-end<?php endif; ?>">
+        <div class="menu-button col-2<?php if (Application::getConfiguration("ToolbarX") == "Right"): ?> order-2<?php endif; ?>">
             <button [matMenuTriggerFor]="menu" class="h-100" mat-icon-button>
                 <i class="material-icons align-middle">menu</i>
             </button>
