@@ -3,7 +3,7 @@
     };
     app.AppComponent = ng.core.Class({
         constructor: function() {
-            console.log(this);
+            console.log(this.router);
         }});
 
     var component = new ng.core.Component();

@@ -9,6 +9,13 @@
         }
     ];
 
+    /*
+     var Routes2 = new ng.router.RouteConfig([
+     { path: '/', component:app.ListsComponent, name:'Lists' },
+     { path: '/children', component:app.ChildrenComponent, name:'Children' }
+     ]);
+     */
+
     app.AppModule.annotations = [
         new ng.core.NgModule({
             imports: [
@@ -21,6 +28,8 @@
                 ng.material.MatButtonModule,
                 ng.material.MatMenuModule,
                 ng.material.MatDialogModule,
+                ng.material.MatIconModule,
+
                 // ng['flex-layout'].FlexLayoutModule
                 ng.router.RouterModule.forRoot(
                     Routes,

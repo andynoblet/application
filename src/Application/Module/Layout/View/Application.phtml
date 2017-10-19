@@ -17,7 +17,10 @@
 <?php endif; ?>
     <mat-sidenav-container>
         <mat-sidenav #sidenav mode="over">
-            <button href="" mat-menu-item (click)="sidenav.toggle()"><mat-icon>home</mat-icon>Home</button>
+            <button href="" mat-menu-item (click)="sidenav.toggle()">
+                <mat-icon>home</mat-icon>
+                Home
+            </button>
             <button href="" mat-menu-item (click)="sidenav.toggle()">Register</button>
             <button href="" mat-menu-item (click)="sidenav.toggle()">3</button>
         </mat-sidenav>
@@ -207,7 +210,10 @@
                 <i class="material-icons">menu</i>
             </button>
             <mat-menu #menu="matMenu" [overlapTrigger]="false" xposition="before" yposition="above" class="Menu">
-                <button href="" mat-menu-item (click)="sidenav.toggle()"><mat-icon>home</mat-icon>Home</button>
+                <a routerLink="/" routerLinkActive="active">
+                    <mat-icon>home</mat-icon>
+                    Home
+                </a>
                 <button mat-menu-item>Register</button>
                 <button mat-menu-item>1</button>
             </mat-menu>
