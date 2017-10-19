@@ -37,7 +37,8 @@ app {
 
 .mat-menu-panel {
     background: #c2185b;
-    width: 100vw !important;
+    /* width: 100vw !important;*/
+    max-width: none !important;
     /* box-shadow: none !important; */
 }
 
@@ -51,6 +52,7 @@ app {
 }
 
 .mat-toolbar {
+    height: 48px !important;
     z-index: 9999 !important;
 }
 

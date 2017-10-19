@@ -17,10 +17,12 @@
 <?php endif; ?>
     <mat-sidenav-container>
         <mat-sidenav #sidenav mode="over">
-            <button href="" mat-menu-item (click)="sidenav.toggle()">Login</button>
+            <button href="" mat-menu-item (click)="sidenav.toggle()"><mat-icon>home</mat-icon>Home</button>
             <button href="" mat-menu-item (click)="sidenav.toggle()">Register</button>
             <button href="" mat-menu-item (click)="sidenav.toggle()">3</button>
         </mat-sidenav>
+        <a routerLink="/ha" routerLinkActive="active">Heroes</a>
+        <router-outlet></router-outlet>
         <mat-card class="mat-elevation-z5">
             <mat-card-title>Test</mat-card-title>
             <mat-card-content>
@@ -205,7 +207,7 @@
                 <i class="material-icons">menu</i>
             </button>
             <mat-menu #menu="matMenu" [overlapTrigger]="false" xposition="before" yposition="above" class="Menu">
-                <button mat-menu-item href="<?php echo Application::getURL("Login"); ?>">Login</button>
+                <button href="" mat-menu-item (click)="sidenav.toggle()"><mat-icon>home</mat-icon>Home</button>
                 <button mat-menu-item>Register</button>
                 <button mat-menu-item>1</button>
             </mat-menu>

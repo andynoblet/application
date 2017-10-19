@@ -21,7 +21,8 @@ class Index {
     }
 
     public function Left() {
-        return $this->View("Layout/Left.phtml");
+        // return $this->View("Layout/Left.phtml");
+        return $this->View("Left.phtml");
     }
 
     public function Right() {

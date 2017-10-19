@@ -17,6 +17,7 @@ class Application extends \Application\Model\Application {
     public function Start() {
         $this->getModule("Session")->createSession();
         $Output = $this->getModule("Controller")->Execute();
+
         print $Output;
 
         return;
