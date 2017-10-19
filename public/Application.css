@@ -1,29 +1,36 @@
 body {
     margin: 0;
 }
-.mat-elevation-z5 {
-    position: relative;
-    z-index: 2;
-}
-.mat-drawer-content {
-    padding: 1em;
-}
-.mat-sidenav {
-    width: 25%
-}
+
 html {
     min-height: 100%;
     height: 100%;
 }
+
 body {
     min-height: 100%;
     height: 100%;
 }
+
 app {
     display: flex;
     flex-direction: column;
     height: 100%;
 }
+
+.mat-elevation-z5 {
+    position: relative;
+    z-index: 2;
+}
+
+.mat-drawer-content {
+    padding: 1em;
+}
+
+.mat-sidenav {
+    width: 25%
+}
+
 .mat-sidenav-container {
     flex: 1;
 }
@@ -42,6 +49,7 @@ app {
     bottom: 56px !important;
     left: 0px !important;
 }
+
 .mat-toolbar {
     z-index: 9999 !important;
 }
