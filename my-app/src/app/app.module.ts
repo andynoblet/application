@@ -1,3 +1,4 @@
+import {MatCardModule} from '@angular/material';
 import {MatSidenavModule} from '@angular/material';
 import {MatMenuModule} from '@angular/material';
 import {MatButtonModule} from '@angular/material';
@@ -20,7 +21,8 @@ import { AppComponent } from './app.component';
     MatIconModule,
     MatButtonModule,
     MatMenuModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatCardModule
 ],
   providers: [],
   bootstrap: [AppComponent]
